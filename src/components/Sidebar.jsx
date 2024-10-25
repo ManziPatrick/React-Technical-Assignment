@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Home, Mail, MessageCircle, Settings, Plus, Users } from 'lucide-react';
 
-
 const Sidebar = () => {
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname === path;
+
   return (
     <div className="flex flex-col items-center w-16 h-screen py-8 space-y-8 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700">
       <div className="flex items-center justify-center w-10 h-10 bg-purple-100 dark:bg-purple-600 rounded-lg">
@@ -12,18 +15,30 @@ const Sidebar = () => {
         </svg>
       </div>
       
-      <nav className="flex flex-col items-center space-y-6">
-        <Link to="/" className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
-          <Home size={20} />
+      <nav className="flex flex-col items-center w-full space-y-6">
+        <Link
+          to="/"
+          className={`relative flex items-center justify-center w-full p-2 ${isActive('/') ? 'bg-gradient-to-r from-blue-500/90 via-blue-500/30 to-white border-l-4 border-blue-500' : ''}`}
+        >
+          <Home size={20} className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" />
         </Link>
-        <Link to="/mail" className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
-          <Mail size={20} />
+        <Link
+          to="/mail"
+          className={`relative flex items-center justify-center w-full p-2 ${isActive('/mail') ? 'bg-gradient-to-r from-blue-500/90 via-blue-500/30 to-white border-l-4 border-blue-500' : ''}`}
+        >
+          <Mail size={20} className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" />
         </Link>
-        <Link to="/messages" className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
-          <MessageCircle size={20} />
+        <Link
+          to="/messages"
+          className={`relative flex items-center justify-center w-full p-2 ${isActive('/messages') ? 'bg-gradient-to-r from-blue-500/90 via-blue-500/30 to-white border-l-4 border-blue-500' : ''}`}
+        >
+          <MessageCircle size={20} className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" />
         </Link>
-        <Link to="/settings" className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
-          <Settings size={20} />
+        <Link
+          to="/settings"
+          className={`relative flex items-center justify-center w-full p-2 ${isActive('/settings') ? 'bg-gradient-to-r from-blue-500/90 via-blue-500/30 to-white border-l-4 border-blue-500' : ''}`}
+        >
+          <Settings size={20} className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" />
         </Link>
       </nav>
       
@@ -43,8 +58,11 @@ const Sidebar = () => {
         </button>
       </div>
       
-      <Link to="/users" className="mt-auto p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
-        <Users size={20} />
+      <Link
+        to="/users"
+        className={`relative flex items-center justify-center w-full mt-auto p-2 ${isActive('/users') ? 'bg-gradient-to-r from-blue-500/90 via-blue-500/30 to-white border-l-4 border-blue-500' : ''}`}
+      >
+        <Users size={20} className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white" />
       </Link>
     </div>
   );

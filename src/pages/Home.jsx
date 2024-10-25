@@ -27,18 +27,12 @@ const Dashboard = () => {
     }
   }, [status, dispatch]);
 
-  const handleAddTodo = (event) => {
-    event.preventDefault();
-    const todo = event.target.elements.todo.value;
-    dispatch(addTodo({ todo, completed: false, userId: 1 }));
-    event.target.reset();
-  };
-
+  
   if (error) return <div>{t('error')}: {error.message}</div>;
 
   return (
     <div className="relative">
-      <h1 className="text-3xl font-bold">{t('websiteDesign')}</h1>
+
       <TaskList tasks={tasks} />
       
       <button 
