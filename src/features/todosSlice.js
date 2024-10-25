@@ -94,7 +94,7 @@ const todosSlice = createSlice({
         state.status = 'failed';
         state.error = action.payload || 'Failed to fetch todos';
       })
-      // Add Todo
+      
       .addCase(addTodo.pending, (state) => {
         state.status = 'loading';
         state.error = null;
@@ -108,7 +108,7 @@ const todosSlice = createSlice({
         state.status = 'failed';
         state.error = action.payload || 'Failed to add todo';
       })
-      // Update Todo
+      
       .addCase(updateTodo.pending, (state) => {
         state.status = 'loading';
         state.error = null;
@@ -125,7 +125,7 @@ const todosSlice = createSlice({
         state.status = 'failed';
         state.error = action.payload || 'Failed to update todo';
       })
-      // Delete Todo
+      
       .addCase(deleteTodo.pending, (state) => {
         state.status = 'loading';
         state.error = null;

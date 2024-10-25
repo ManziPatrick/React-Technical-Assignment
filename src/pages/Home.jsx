@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { fetchTasks } from '../api/tasks.js';
+
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchTodos, addTodo } from '../features/todos/todosSlice';
+import { fetchTodos, addTodo } from '../features/todosSlice.js';
 import TaskList from '../components/TaskList.jsx';
 import { useTranslation } from 'react-i18next';
 import { MessageCircle } from 'lucide-react';
 import Chat from '../components/TaskChart.jsx';  
 
-const Dashboard = () => {
+const Home = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   const { data: tasks, isLoading, error } = useQuery({
     queryKey: ['tasks'],
-    queryFn: fetchTasks,
+    queryFn: fetchTodos,
   });
 
   const todos = useSelector((state) => state.todos.items);
@@ -50,4 +50,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Home;

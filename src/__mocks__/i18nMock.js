@@ -12,7 +12,6 @@ export default {
     },
   };
   
-  // Mock the entire module
   jest.mock('react-i18next', () => ({
     
     useTranslation: () => {

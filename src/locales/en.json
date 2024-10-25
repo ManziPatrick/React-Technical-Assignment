@@ -5,5 +5,14 @@
   "comments": "{{count}} comment",
   "comments_plural": "{{count}} comments",
   "task1": "Design the homepage",
-  "task2": "Develop API endpoints"
+  "task2": "Develop API endpoints",
+  "workspace": "Workspace",
+  "creativeWebsite": "Creative Website",
+  "updated": "Updated",
+  "websiteDesign": "Website Design",
+  "limitedAccess": "Limited access",
+  "copyLink": "Copy Link",
+  "delete": "Delete"
+  
+  
 }
