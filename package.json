@@ -10,7 +10,7 @@
     "test": "jest --transformIgnorePatterns \"node_modules/(?!@shotgunjed)/\"",
     "test:watch": "jest --watch --transformIgnorePatterns \"node_modules/(?!@shotgunjed)/\"",
     "test:coverage": "jest --coverage --transformIgnorePatterns \"node_modules/(?!@shotgunjed)/\"",
-    "lint": "eslint . --ext .js,.jsx"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@headlessui/react": "^2.1.10",
