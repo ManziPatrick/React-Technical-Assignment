@@ -1,0 +1,9 @@
+{
+  "todo": "À faire",
+  "inProgress": "En cours",
+  "completed": "Terminé",
+  "comments": "{{count}} commentaire",
+  "comments_plural": "{{count}} commentaires",
+  "task1": "Concevoir la page d'accueil",
+  "task2": "Développer des points de terminaison API"
+}

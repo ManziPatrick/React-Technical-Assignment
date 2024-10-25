@@ -1,0 +1,9 @@
+{
+  "todo": "To Do",
+  "inProgress": "In Progress",
+  "completed": "Completed",
+  "comments": "{{count}} comment",
+  "comments_plural": "{{count}} comments",
+  "task1": "Design the homepage",
+  "task2": "Develop API endpoints"
+}
