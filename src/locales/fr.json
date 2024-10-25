@@ -5,5 +5,12 @@
   "comments": "{{count}} commentaire",
   "comments_plural": "{{count}} commentaires",
   "task1": "Concevoir la page d'accueil",
-  "task2": "Développer des points de terminaison API"
+  "task2": "Développer des points de terminaison API",
+  "workspace": "Espace de travail",
+  "creativeWebsite": "Site Web créatif",
+  "updated": "Mise à jour",
+  "websiteDesign": "Conception de site Web",
+  "limitedAccess": "Accès limité",
+  "copyLink": "Copier le lien",
+  "delete": "Supprimer"
 }

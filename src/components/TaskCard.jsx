@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { updateTodo, deleteTodo } from "../features/todos/todosSlice";
+import { updateTodo, deleteTodo } from "../features/todosSlice";
 import { useTranslation } from 'react-i18next';
 import { Trash, Star, MoreVertical, MessageCircle } from 'lucide-react';
 import { useState } from 'react';
@@ -88,13 +88,14 @@ const TaskCard = ({ task, darkMode }) => {
           </div>
 
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-gray-400 dark:text-gray-500 text-sm">1</span>
-            </div>
+           
             
             <button className="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors">
               <MessageCircle size={18} />
             </button>
+            <div className="flex items-center gap-2">
+              <span className="text-gray-400 dark:text-gray-500 text-sm">1</span>
+            </div>
           </div>
         </div>
       </div>

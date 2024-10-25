@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchTodos, addTodo } from '../features/todos/todosSlice';
+import { fetchTodos, addTodo } from '../features/todosSlice';
 import { Plus } from 'lucide-react';
 import firter from "../assets/filter.png"
 import TaskCard from './TaskCard';
 import { useTranslation } from 'react-i18next';
 import { TaskManagementSkeleton } from '../../skeleton/homeSkeleton';
 import Header from "./TaskStats"
-const TaskManagementPage = () => {
+const TaskList = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const tasks = useSelector((state) => state.todos.items);
@@ -168,4 +168,4 @@ const TaskManagementPage = () => {
   );
 };
 
-export default TaskManagementPage;
+export default TaskList;

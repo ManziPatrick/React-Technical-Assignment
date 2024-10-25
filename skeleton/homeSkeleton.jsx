@@ -2,7 +2,7 @@ import React from 'react';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { useDispatch } from "react-redux";
-import { updateTodo, deleteTodo } from ".././src/features/todos/todosSlice";
+import { updateTodo, deleteTodo } from "../src/features/todosSlice";
 
 import { useTranslation } from 'react-i18next';
 import { Trash } from 'lucide-react';
