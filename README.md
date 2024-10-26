@@ -44,19 +44,19 @@ npm run dev
 yarn dev
 ```
 
-###screenshots of CRUD
-#To add todo
+### screenshots of CRUD
+## To add todo
 ![image](https://github.com/user-attachments/assets/bb90687f-c7f4-4cf4-a5e1-70ee4f0f771c)
-#To update the status is just to click status 
+## To update the status is just to click status 
 ![image](https://github.com/user-attachments/assets/4080e3e9-75d5-4ac5-9990-595b9f2c65fd)
-#To delete the ticket  click on three dots and delete
+## To delete the ticket  click on three dots and delete
 ![image](https://github.com/user-attachments/assets/36161e45-ea85-4345-b045-b0b99b426d06)
-#To get all the tickets 
+## To get all the tickets 
 ![image](https://github.com/user-attachments/assets/7644b3a2-1846-4751-8204-969a8600fe52)
 
 
 
-
+### Localhost
 
 The application will be available at `http://localhost:5173`
 
