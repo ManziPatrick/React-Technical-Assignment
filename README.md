@@ -25,7 +25,6 @@ Following this design
 
 ![image](https://github.com/user-attachments/assets/e8b88ba3-b583-47ce-b191-a1f641540713)
 
-
 - Create a task manager app that reflects the above design both in terms of responsiveness, UI and UX(make it look alive )
 - Add dark theme support to it(use your designer eye for this one😉)
 - Add support for i18n(English and French)
