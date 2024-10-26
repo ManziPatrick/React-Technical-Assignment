@@ -2,7 +2,7 @@
 
 A simple Todo application built with React and Vite, using DummyJSON as a backend API.
 
-Live demo: [https://todo-app-pi-liard.vercel.app/](https://todo-app-pi-liard.vercel.app/)
+Live demo: [https://todo-app-assign.vercel.app/](https://todo-app-assign.vercel.app/)
 
 ## Prerequisites
 
@@ -14,8 +14,8 @@ Live demo: [https://todo-app-pi-liard.vercel.app/](https://todo-app-pi-liard.ver
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/ManziPatrick/todo-App.git
-cd todo-App
+git clone https://github.com/ManziPatrick/React-Technical-Assignment.git
+cd React-Technical-Assignment
 ```
 
 ### 2. Install dependencies
