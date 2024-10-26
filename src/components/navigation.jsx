@@ -28,9 +28,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center flex-1">
             <div className="flex-shrink-0">
-              <svg className="h-8 w-8 text-indigo-500" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-              </svg>
+              
             </div>
             <div className="ml-4 flex-1 max-w-xl">
               <div className="relative">
@@ -39,7 +37,7 @@ const Navigation = () => {
                 </div>
                 <input
                   className="block w-full pl-10 pr-3 py-2 border border-gray-300 dark:border-gray-700 rounded-md leading-5 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                  placeholder={t('searchPlaceholder')}
+                  placeholder={t('search')}
                   type="search"
                 />
               </div>

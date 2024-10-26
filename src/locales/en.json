@@ -12,7 +12,9 @@
   "websiteDesign": "Website Design",
   "limitedAccess": "Limited access",
   "copyLink": "Copy Link",
-  "delete": "Delete"
+  "delete": "Delete",
+  "search":"Search",
+  "creative":"Creative"
   
   
 }

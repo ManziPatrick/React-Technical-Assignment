@@ -74,7 +74,7 @@ const TaskList = () => {
   ];
 
   return (
-    <div className={`bg-gray-100 dark:bg-gray-800 min-h-screen py-8 ${darkMode ? 'dark' : ''}`}>
+    <div className={`bg-gray-100 dark:bg-gray-800 min-h-screen  ${darkMode ? 'dark' : ''}`}>
       <div className="max-w-7xl mx-auto px-4">
       <Header/>
         <div className="bg-white dark:bg-gray-700 shadow-md rounded-lg p-4 mb-6">
