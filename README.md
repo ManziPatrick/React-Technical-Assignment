@@ -1,5 +1,6 @@
 # Todo App
-this was assigned to this email ### [munyeshurimanzi@gmail.com]
+this was assigned to this email 
+### [munyeshurimanzi@gmail.com]
 A simple Todo application built with React and Vite, using DummyJSON as a backend API.
 
 Live demo: [https://todo-app-assign.vercel.app/](https://todo-app-assign.vercel.app/)
