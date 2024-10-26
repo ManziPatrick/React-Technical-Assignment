@@ -1,10 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import API_CONFIG from '../config/api';
 
 export const fetchTodos = createAsyncThunk(
   'todos/fetchTodos',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await fetch('https://dummyjson.com/todos');
+      const response = await fetch(`${API_CONFIG.baseURL}${API_CONFIG.endpoints.todos}`);
       if (!response.ok) {
         throw new Error('Failed to fetch todos');
       }
@@ -19,7 +20,7 @@ export const addTodo = createAsyncThunk(
   'todos/addTodo',
   async (todo, { rejectWithValue }) => {
     try {
-      const response = await fetch('https://dummyjson.com/todos/add', {
+      const response = await fetch(`${API_CONFIG.baseURL}${API_CONFIG.endpoints.addTodo}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(todo),
@@ -38,7 +39,7 @@ export const updateTodo = createAsyncThunk(
   'todos/updateTodo',
   async ({ id, updates }, { rejectWithValue }) => {
     try {
-      const response = await fetch(`https://dummyjson.com/todos/${id}`, {
+      const response = await fetch(`${API_CONFIG.baseURL}${API_CONFIG.endpoints.updateTodo(id)}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updates),
@@ -57,7 +58,7 @@ export const deleteTodo = createAsyncThunk(
   'todos/deleteTodo',
   async (id, { rejectWithValue }) => {
     try {
-      const response = await fetch(`https://dummyjson.com/todos/${id}`, {
+      const response = await fetch(`${API_CONFIG.baseURL}${API_CONFIG.endpoints.deleteTodo(id)}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
@@ -77,7 +78,11 @@ const todosSlice = createSlice({
     status: 'idle',
     error: null,
   },
-  reducers: {},
+  reducers: {
+    clearError: (state) => {
+      state.error = null;
+    }
+  },
   extraReducers: (builder) => {
     builder
       
@@ -109,6 +114,7 @@ const todosSlice = createSlice({
         state.error = action.payload || 'Failed to add todo';
       })
       
+      // Update Todo
       .addCase(updateTodo.pending, (state) => {
         state.status = 'loading';
         state.error = null;
@@ -126,6 +132,7 @@ const todosSlice = createSlice({
         state.error = action.payload || 'Failed to update todo';
       })
       
+      // Delete Todo
       .addCase(deleteTodo.pending, (state) => {
         state.status = 'loading';
         state.error = null;
@@ -142,4 +149,5 @@ const todosSlice = createSlice({
   },
 });
 
+export const { clearError } = todosSlice.actions;
 export default todosSlice.reducer;
