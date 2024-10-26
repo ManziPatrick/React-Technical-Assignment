@@ -14,7 +14,7 @@ Live demo: [https://todo-app-pi-liard.vercel.app/](https://todo-app-pi-liard.ver
 ### 1. Clone the repository
 
 ```bash
-[git clone <repository-url>](https://github.com/ManziPatrick/todo-App.git)
+git clone https://github.com/ManziPatrick/todo-App.git
 cd todo-App
 ```
 
